@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <div>
+     <a class="logo" style="width: 100px; height: 100px;"> </a>
+  </div>
+
+  <div>
+    <span id="troopers">
+      <a href="stormtrooper.html">Штурмовик</a> / <a href="medic.html">Медик</a> / <a href="engineer.html">Инженер</a> / <a href="sniper.html">Снайпер</a>
+    </span>
+    <span id="troopers" style="float:right">
+      <a href="bosses.html">Боссы</a> / <a href="enemies.html">Враги</a>
+    </span>
+  </div>
+
+
+  <div>
+    <img id="im" src="Foto/slide_show_1.jpg" />
+  </div>
+
+  <a href="https://static.dl.mail.ru/WarfaceLoader.exe"><span class="download"> Скачать игру</span></a>
+
+  <style>
+    a.logo {
+      background: url(Foto/logo_1.jpg);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a.logo:hover {
+      background: url(Foto/logo_2.jpg);
+    }
+
+    #troopers {
+      margin-left: 100px;
+      margin-right: 450px;
+      font-size: 30px;
+      color: orange;
+    }
+
+    #troopers a {
+      color: red;
+      font-size: 30px;
+    }
+
+    #troopers a:hover {
+      color: black;
+    }
+
+    /*a:visited {
+      color: black;
+      background-color: transparent;
+      text-decoration: none;
+    }*/
+
+    body {
+      background-image: url("Foto/Warface_Winter_Update_Screen2_OilDepot.jpg");
+    }
+
+    #im {
+      margin-top: 55px;
+      width: 500px;
+      height: 500px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    .download {
+      color: black;
+      background-color: orange;
+      text-align: center;
+      font-size: 60px;
+      width: 500px;
+      height: 80px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .download:hover {
+      color: red;
+    }
+  </style>
+
+  <script>
+    var i = 0;
+    arrGif = ["Foto/slide_show_1.jpg",
+      "Foto/slide_show_2.jpg",
+      "Foto/slide_show_3.jpg",
+    ];
+    window.onload = function() {
+      setInterval(fn, 2000);
+    }
+
+    function fn() {
+      document.getElementById("im").src = arrGif[i];
+      i++;
+      if (i > 2) i = 0;
+    }
+  </script>
+
+</body>
+
+</html>
