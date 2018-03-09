@@ -29,4 +29,31 @@
  <body>
   <div>Пример</div>
  </body>
+ <script>
+ getElement('http://ru.stackoverflow.com', '#nav-questions', function(element) {
+    console.log(element);
+});
+
+getElement('http://ru.stackoverflow.com', '.question-hyperlink', function(element) {
+    console.log(element.innerHTML);
+});
+
+function getElement(url, selector, c) {
+    request(new XMLHttpRequest());
+
+    function request(xhr) {
+        xhr.open('GET', 'https://crossorigin.me/' + url, true);
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4) {
+                if(xhr.status == 200) {
+                    html = document.createElement('div');
+                    html.innerHTML = xhr.responseText;
+                    c(html.querySelector(selector));
+                }
+            }
+        }
+    }
+}
+</script>
 </html>

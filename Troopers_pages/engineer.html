@@ -7,8 +7,20 @@
 
 <body>
 
-  <div style="float:left">
-    <img src="../Troopers_foto/engineer.png" alt="engineer" style="width:60%; heigth:60%" />
+  <div id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()" style="float:left">
+    <img id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()" src="../Troopers_foto/engineer.png" alt="Workplace" usemap="#workmap" width=60% height=60%>
+
+    <map id="demo" name="workmap">
+      <area shape="default" alt="uniform" href="https://www.w3schools.com/cssref/default.asp">
+      <area id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()" shape="poly"
+            coords="29,26, 20,27, 30,73, 28,88, 50,194, 62,197, 58,185, 63,185, 72,195, 70,225, 67,234, 70,247, 74,248,
+                    81,268, 78,278, 68,282, 100,200"
+            alt="Computer" href="../Weapons_engineer/desert_tech_mdr_c.html">
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+      <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    </map>
+
+    <!-- <img src="../Troopers_foto/engineer.png" alt="engineer" style="width:60%; heigth:60%" /> -->
   </div>
 
   <h4 style="margin-top:-5px">Desert Tech MDR‐C</h4>
@@ -19,13 +31,23 @@
   </div>
 
   <style>
-
     #links {
       margin-top: -20px;
       width: 10%;
     }
-
   </style>
 
+  <script>
+    function mouseOver() {
+      x = document.getElementById("demo");
+      
+    }
+
+    function mouseOut() {
+      document.getElementById("demo").style.color = "black";
+    }
+  </script>
+
 </body>
+
 </html>
